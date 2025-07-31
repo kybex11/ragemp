@@ -1,0 +1,1 @@
+mp.discord.update('KBRP - В игре', '0 | Дальнобойщик');

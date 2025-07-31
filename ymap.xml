@@ -1,0 +1,26 @@
+<CMapData>
+  <name>empty_map</name>
+  <parent></parent>
+  <flags value="0"/>
+  <contentFlags value="0"/>
+  <streamingExtentsMin x="0.0" y="0.0" z="0.0"/>
+  <streamingExtentsMax x="0.0" y="0.0" z="0.0"/>
+  <entitiesExtentsMin x="0.0" y="0.0" z="0.0"/>
+  <entitiesExtentsMax x="0.0" y="0.0" z="0.0"/>
+  <entities/>
+  <containerLods/>
+  <boxOccluders/>
+  <modelOccluders/>
+  <physicsDictionaries/>
+  <ybnNames/>
+  <grassData/>
+  <distantLODLights/>
+  <block>
+    <version value="2"/>
+    <flags value="0"/>
+    <name>empty_map</name>
+    <exportedBy>CodeWalker</exportedBy>
+    <owner>user</owner>
+    <time>00:00:00</time>
+  </block>
+</CMapData>
