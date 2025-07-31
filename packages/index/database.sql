@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS characters (
     cardBalance INT,
     fraction INT,
     fractionRank INT,
-    worksExp: JSON,
+    worksExp JSON,
     work INT,
     gender INT,
     wanted INT,
@@ -23,6 +23,10 @@ CREATE TABLE IF NOT EXISTS characters (
 
 CREATE TABLE IF NOT EXISTS vehicles (
     id INT,
+    ownerID INT,
+    x INT, -- для метки
+    y INT, -- для метки
+    z INT, -- для метки
     model VARCHAR(50),
     color VARCHAR(20),
     plate VARCHAR(10)

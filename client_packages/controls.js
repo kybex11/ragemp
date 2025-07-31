@@ -1,4 +1,22 @@
-const keys = {"enter":"0x0D","backspace":"0x08","shift":"0x10","ctrl":"0x11","alt":"0x12","arrow_up":"0x26","arrow_left":"0x25","arrow_right":"0x27","arrow_down":"0x28","0":"0x30","1":"0x31","2":"0x32","3":"0x33","4":"0x34","5":"0x35","6":"0x36","7":"0x37","8":"0x38","9":"0x39","a":"0x41","b":"0x42","c":"0x43","d":"0x44","e":"0x45","f":"0x46","g":"0x47","h":"0x48","i":"0x49","j":"0x4A","k":"0x4B","l":"0x4C","m":"0x4D","n":"0x4E","o":"0x4F","p":"0x50","q":"0x51","r":"0x52","s":"0x53","t":"0x54","u":"0x55","v":"0x56","w":"0x57","x":"0x58","y":"0x59","z":"0x5A","f1":"0x70","f2":"0x71","f3":"0x72","f4":"0x73","f5":"0x74","f6":"0x75","f7":"0x76","f8":"0x77","f9":"0x78","f10":"0x79","f11":"0x7A","f12":"0x7B","tab":"0x07","caps_lock":"0x14"};
+const keys = {
+  "enter": 13,
+  "backspace": 8,
+  "shift": 16,
+  "ctrl": 17,
+  "alt": 18,
+  "arrow_up": 38,
+  "arrow_left": 37,
+  "arrow_right": 39,
+  "arrow_down": 40,
+  "0": 48, "1": 49, "2": 50, "3": 51, "4": 52, "5": 53, "6": 54, "7": 55, "8": 56, "9": 57,
+  "a": 65, "b": 66, "c": 67, "d": 68, "e": 69, "f": 70, "g": 71, "h": 72, "i": 73, "j": 74,
+  "k": 75, "l": 76, "m": 77, "n": 78, "o": 79, "p": 80, "q": 81, "r": 82, "s": 83, "t": 84,
+  "u": 85, "v": 86, "w": 87, "x": 88, "y": 89, "z": 90,
+  "f1": 112, "f2": 113, "f3": 114, "f4": 115, "f5": 116, "f6": 117,
+  "f7": 118, "f8": 119, "f9": 120, "f10": 121, "f11": 122, "f12": 123,
+  "tab": 9,
+  "caps_lock": 20
+};
 // enter backspace shift ctrl alt tab caps_lock
 // arrow_up arrow_left arrow_right arrow_down  
 // 0 1 2 3 4 5 6 7 8 9
@@ -23,11 +41,6 @@ let hotkeys = {
   "noclip": keys['f3']
 }
 
-mp.events.add('client:controls:getHotkey', (a) => {
-  if(CONFIG.CUSTOMIZATION_ENABLED) return hotkeys[a];
-  else return defaultHotkeys[a];
-})
-
-mp.events.add('client:controls:getKey', (a) => {
-  if(keys[a]) return keys[a];
+mp.keys.bind(hotkeys['noclip'], true, () => {
+  mp.events.call('client:controls:toggleNoclip');
 })

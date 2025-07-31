@@ -29,7 +29,7 @@ var getCrossProduct = function (v1, v2) {
     return vector;
 };
 
-mp.keys.bind(mp.events.call('client:controls:getHotkey', 'noclip'), true, function () {
+mp.events.add('client:controls:toggleNoclip', () => {
     isNoClip = !isNoClip;
     mp.game.ui.displayRadar(!isNoClip);
 
