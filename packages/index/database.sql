@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS characters (
     balance INT,
     cardBalance INT,
     fraction INT,
+    fractionRank INT,
+    worksExp: JSON,
     work INT,
     gender INT,
     wanted INT,
